@@ -1,0 +1,220 @@
+@import url('https://fonts.cdnfonts.com/css/cyberpunk-is-not-dead');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    /*font-family: 'Comfortaa';*/
+    /*font-family: 'Cyberpunk Is Not Dead', sans-serif;*/
+}
+
+:root{
+    /*-----------------------------------*/
+    --clearneonBlue: #4deeea;
+    --neonBlue: #00b8ff;
+    --deepneonBlue: #4700ff;
+    --clearneonPurple: #ff00b8;
+    --neonPurple: #c610ae;
+    --deepneonPurple: #B71DDE;
+
+    --clearneonGreen: #00ff47;
+    --neonGreen: #04e762;
+    --deepneonGreen: #4cb944;
+    --clearneonRed: #ff4700;
+    --neonRed: #D22730;
+    --deepneonRed: #860f0f;
+
+    --clearneonYellow: #e5ec1a;
+    --neonYellow: #FFDE00;
+    --deepneonYellow: #deb00a;
+    --clearneonViolet: #9400d3;
+    --neonViolet: #663399;
+    --deepneonViolet: #4b0082;
+    
+    --neonOrange:  #FFAD00;
+    /*-----------------------------------*/
+    --whitesmoke: rgb(229, 229, 229);
+    --grey: rgb(106, 106, 106);
+    --mediumgrey: rgb(80, 80, 80);
+    --deepgrey: rgb(50, 50, 50);
+    --clearblack: rgba(35, 35, 35, 0.5);
+    --mediumblack: rgb(23, 23, 23);
+    /*-----------------------------------*/
+}
+
+h1, h2{
+    font-family: 'Cyberpunk Is Not Dead', sans-serif;
+    font-size: 2rem;
+}
+
+p, span{
+    color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+    transition: all 350ms ease;
+}
+
+a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    position: absolute;
+    transition: all 350ms ease;
+}
+
+a:hover::after{
+    width: 100%;
+    transition: all 350ms ease;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--mediumblack);
+    padding: 0 10%;
+    z-index: 0;
+}
+
+img{
+    width: 200px;
+}
+
+#navbar{
+    width: 100%;
+    height: 12vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: fixed;
+    padding: 3rem 10%;
+    background-color: var(--deepgrey);
+    border-bottom: 2px solid var(--neonRed);
+    box-shadow: inset 0px 0px 10px var(--neonRed);
+}
+
+#navbar-content{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#navbar-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar-title img{
+    width: 50px;
+    margin-right: 25px;
+}
+
+#navbar-title h1{
+    color: var(--clearneonBlue);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonPurple);
+}
+
+#navbar-links{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+#navbar-links a{
+    font-family: 'Cyberpunk Is Not Dead', sans-serif;
+    font-size: 15px;
+    color: var(--neonRed);
+    
+}
+
+#navbar-links a::after{
+    background-color: var(--neonRed);
+    box-shadow: 0px 0px 10px var(--neonRed);
+}
+
+#navbar-links a:hover{
+    text-shadow: 1.5px 1.5px 3px var(--clearneonBlue);
+}
+
+#navbar-links li:hover{
+    transform: scale(1.2);
+    transition: all 350ms ease;
+}
+
+#navbar-links li{
+    transition: all 350ms ease;
+}
+
+#navbar-login{
+    padding: 10px;
+    border: 2px solid var(--neonRed);
+    border-radius: 5px;
+}
+
+#navbar-login:hover{
+    border: 2px solid var(--neonBlue);
+    box-shadow: inset 0px 0px 10px var(--clearneonBlue);
+    transition: all 350ms ease;
+    font-weight: bold;
+}
+
+#navbar-login:hover::after{
+    width: 0%;
+}
+
+/*
+        <section id="banner">
+            <div id="banner-content">
+                <h2 id="title-banner">Odisseia</h2>
+                <p class="paragraph-banner">Descubra um universo repleto de diversidade e tensões, onde a tecnologia encontra a magia em uma fusão única.</p>
+                <p class="paragraph-banner">Em Odisseia, explore a complexidade de um mundo onde mitologia e ciência se entrelaçam, moldando o destino das raças.</p>
+            </div>
+        </section>
+*/
+
+#banner{
+    margin-top: 11vh;
+    height: 70vh;
+    padding: 4% 2% 4% 0px;
+    background-image: url(/Image/Banner\ Index.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--neonBlue);
+    box-shadow: inset 0px 0px 20px var(--clearneonBlue);
+    border-radius: 10px;
+}
+
+#banner-content{
+    display: flex;
+    margin-left: -2px;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: var(--mediumblack);
+    background: linear-gradient(90deg, rgba(23,23,23,1) 20%, rgba(77,238,234,0) 100%);
+}
+
+#title-banner{
+    color: var(--clearneonBlue);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonPurple);
+}
+
+.paragraph-banner{
+    text-shadow: 0px 0px 10px var(--clearneonBlue);
+    font-size: 20px;
+}
