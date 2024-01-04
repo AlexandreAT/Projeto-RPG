@@ -203,13 +203,13 @@ img{
 }
 
 #banner-content{
-    display: flex;
+    /*display: flex;*/
     margin-left: -2px;
     padding: 10px;
-    flex-direction: column;
+    /*flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    background: var(--mediumblack);
+    background: var(--mediumblack);*/
     background: linear-gradient(90deg, rgba(23,23,23,1) 20%, rgba(77,238,234,0) 100%);
 }
 
@@ -352,6 +352,10 @@ img{
     border-top: 2px solid var(--clearneonBlue);
 }
 
+#content-cities{
+    border-top: 2px solid var(--neonRed);
+}
+
 .wiki-content-title{
     position: absolute;
     top: -15px;
@@ -366,6 +370,12 @@ img{
     text-shadow: 1.5px 1.5px 3px var(--clearneonPurple);
 }
 
+#title-cities{
+    background-color: var(--mediumblack);
+    color: var(--neonRed);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonGreen);
+}
+
 article{
     display: flex;
     flex-direction: column;
@@ -374,6 +384,8 @@ article{
     background-color: var(--clearblack);
     border-radius: 5px;
 }
+
+/* card dos personagens */
 
 .card-character header{
     display: flex;
@@ -423,15 +435,85 @@ article{
 }
 
 #character-read-more:hover{
-    text-shadow: 0px 0px 10px var(--clearneonPurple);
+    text-shadow: 0px 0px 5px var(--clearneonPurple);
     transform: scale(1.1);
 }
 
-#navbar-links a::after{
-    background-color: var(--neonRed);
-    box-shadow: 0px 0px 10px var(--neonRed);
+/* ------------------------------------------------------------------- */
+
+/* card das cidades */
+
+.card-city{
+    padding: 0;
 }
 
-#navbar-links a:hover{
-    text-shadow: 1.5px 1.5px 3px var(--clearneonBlue);
+.card-city header:hover{
+    box-shadow: 0px 0px 10px var(--neonRed);
+    border: 2px solid var(--neonRed);
+    transition: all 350ms ease;
+}
+
+.card-city header{
+    border: 2px solid transparent;
+    transition: all 350ms ease;
+}
+
+#city-Alurën{
+    height: 250px;
+    background-image: url(/Image/Cidade\ Alurën.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#city-Elysium{
+    height: 250px;
+    background-image: url(/Image/Cidade\ Elysium.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.city-name{
+    padding: 10px;
+    margin: -3px 0px 0px -2px;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: 'DO Futuristic', sans-serif;
+    color: var(--neonRed);
+    text-shadow: 0px 0px 5px var(--clearneonGreen);
+    background: linear-gradient(90deg, rgba(23,23,23,0.9) 10%, rgba(77,238,234,0) 50%);
+    border-top-left-radius: 5px;
+}
+
+.card-city .wiki-text{
+    margin: 0px 15px 15px;
+}
+
+.card-city footer{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 10%;
+    margin: 0px 15px 15px;
+}
+
+#city-read-more{
+    color: var(--neonRed);
+}
+
+#city-read-more::after{
+    background-color: var(--neonRed);
+    box-shadow: 0px 0px 10px var(--clearneonGreen);
+}
+
+#city-read-more:hover{
+    text-shadow: 0px 0px 5px var(--clearneonGreen);
+    transform: scale(1.1);
 }
