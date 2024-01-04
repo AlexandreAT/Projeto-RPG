@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/cyberpunk-is-not-dead');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.cdnfonts.com/css/do-futuristic');
 
 * {
     margin: 0;
@@ -52,6 +53,7 @@ h1, h2{
 
 p, span{
     color: whitesmoke;
+    font-size: 20px;
 }
 
 a{
@@ -86,21 +88,30 @@ main{
     z-index: 0;
 }
 
+section{
+    margin-bottom: 3rem;
+    min-width: 100%;
+}
+
 img{
     width: 200px;
 }
 
+/* section navbar */
+
 #navbar{
     width: 100%;
-    height: 12vh;
+    height: 10vh;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
-    padding: 3rem 10%;
+    padding: 4px 10%;
     background-color: var(--deepgrey);
     border-bottom: 2px solid var(--neonRed);
     box-shadow: inset 0px 0px 10px var(--neonRed);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 #navbar-content{
@@ -118,8 +129,10 @@ img{
 }
 
 #navbar-title img{
-    width: 50px;
+    height: 100%;
+    width: 45px;
     margin-right: 25px;
+    margin-top: 6px;
 }
 
 #navbar-title h1{
@@ -175,19 +188,10 @@ img{
     width: 0%;
 }
 
-/*
-        <section id="banner">
-            <div id="banner-content">
-                <h2 id="title-banner">Odisseia</h2>
-                <p class="paragraph-banner">Descubra um universo repleto de diversidade e tensões, onde a tecnologia encontra a magia em uma fusão única.</p>
-                <p class="paragraph-banner">Em Odisseia, explore a complexidade de um mundo onde mitologia e ciência se entrelaçam, moldando o destino das raças.</p>
-            </div>
-        </section>
-*/
-
+/* section banner */
 #banner{
-    margin-top: 11vh;
-    height: 70vh;
+    margin-top: 9vh;
+    height: 80vh;
     padding: 4% 2% 4% 0px;
     background-image: url(/Image/Banner\ Index.jpg);
     background-size: cover;
@@ -216,5 +220,218 @@ img{
 
 .paragraph-banner{
     text-shadow: 0px 0px 10px var(--clearneonBlue);
+    margin-bottom: 5px;
+}
+
+/* section about */
+
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#title-about{
+    position: absolute;
+    top: -20px;
+    padding: 10px;
+    background-color: var(--mediumblack);
+    border: 2px solid var(--neonPurple);
+    box-shadow: 0px 0px 10px var(--clearneonPurple);
+    color: var(--clearneonPurple);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonBlue);
+    border-radius: 5px;
+}
+
+#about-content{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 1.5rem 1.5rem;
+    border: 2px solid var(--neonPurple);
+    box-shadow: inset 0px 0px 20px var(--clearneonPurple);
+    border-radius: 5px;
+}
+
+#about-content img{
+    width: 400px;
+    box-shadow: 0px 0px 15px;
+    margin-right: 20px;
+}
+
+.paragraph-about{
+     margin-bottom: 15px;
+}
+
+/* section campaings */
+
+#campaings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#title-campaings{
+    position: absolute;
+    top: -20px;
+    padding: 10px;
+    background-color: var(--mediumblack);
+    border: 2px solid var(--neonYellow);
+    box-shadow: 0px 0px 10px var(--clearneonYellow);
+    color: var(--clearneonYellow);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonViolet);
+    border-radius: 5px;
+}
+
+#campaing-content{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 1.5rem 1.5rem;
+    border: 2px solid var(--neonYellow);
+    box-shadow: inset 0px 0px 20px var(--clearneonYellow);
+    border-radius: 5px;
+}
+
+#campaing-content img{
+    width: 400px;
+    box-shadow: 0px 0px 15px;
+    margin-right: 20px;
+}
+
+#campaing-title{
+    font-size: 30px;
+    color: var(--clearneonYellow);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonViolet);
+    margin-bottom: 15px;
+}
+
+/* section wiki highlights */
+
+#wiki-highlights{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#title-wiki{
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    padding: 10px;
+    background-color: var(--mediumblack);
+    border: 2px solid var(--neonBlue);
+    box-shadow: 0px 0px 10px var(--clearneonBlue);
+    color: var(--clearneonBlue);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonPurple);
+    border-radius: 5px;
+}
+
+#wiki-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1.5rem 1.5rem;
+    border: 2px solid var(--neonBlue);
+    box-shadow: inset 0px 0px 20px var(--clearneonBlue);
+    border-radius: 5px;
+}
+
+.content-box{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#content-characters{
+    border-top: 2px solid var(--clearneonBlue);
+}
+
+.wiki-content-title{
+    position: absolute;
+    top: -15px;
+    padding: 0px 10px;
+    text-transform: uppercase;
     font-size: 20px;
+}
+
+#title-characters{
+    background-color: var(--mediumblack);
+    color: var(--clearneonBlue);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonPurple);
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 15px;
+    background-color: var(--clearblack);
+    border-radius: 5px;
+}
+
+.card-character header{
+    display: flex;
+    align-items: center;
+}
+
+.card-character img{
+    width: 200px;
+    margin-right: 3rem;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 350ms ease;
+}
+
+.card-character img:hover{
+    box-shadow: 0px 0px 10px var(--clearneonBlue);
+    border: 2px solid var(--clearneonBlue);
+    transition: all 350ms ease;
+}
+
+.character-name{
+    font-size: 40px;
+    font-weight: 100;
+    font-family: 'DO Futuristic', sans-serif;
+    color: var(--clearneonBlue);
+    text-shadow: 0px 0px 5px var(--clearneonPurple);
+}
+
+.character-text{
+    margin-bottom: 15px;
+}
+
+.card-character footer{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 100%;
+}
+
+#character-read-more{
+    color: var(--clearneonBlue);
+}
+
+#character-read-more::after{
+    background-color: var(--clearneonBlue);
+    box-shadow: 0px 0px 10px var(--clearneonPurple);
+}
+
+#character-read-more:hover{
+    text-shadow: 0px 0px 10px var(--clearneonPurple);
+    transform: scale(1.1);
+}
+
+#navbar-links a::after{
+    background-color: var(--neonRed);
+    box-shadow: 0px 0px 10px var(--neonRed);
+}
+
+#navbar-links a:hover{
+    text-shadow: 1.5px 1.5px 3px var(--clearneonBlue);
 }
