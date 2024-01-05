@@ -55,9 +55,6 @@
         <section id="campaings">
             <h2 id="title-campaings">Campanha do RPG</h2>
             <div id="campaing-content">
-                <figure>
-                    <img src="/Image/Banner Campanha.png" alt="Banner - Campanha">
-                </figure>
                 <div id="campaing-text">
                     <h3 id="campaing-title">Insurgência</h3>
                     <p>
@@ -65,13 +62,15 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores neque iste similique officiis aliquam adipisci reiciendis voluptas quod mollitia, porro dolorem dolorum, eligendi dolore. Iure quia maxime dolore quaerat.
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores fuga labore praesentium numquam! Repellendus esse, dolore optio fuga excepturi unde incidunt neque, amet magnam fugiat asperiores quae sequi nostrum. Quasi!
                     </p>
-                </div>                
+                </div>   
+                <figure>
+                    <img src="/Image/Banner Campanha.png" alt="Banner - Campanha">
+                </figure>             
             </div>
         </section>
         <section id="wiki-highlights">
             <h2 id="title-wiki">Destaques da wiki</h2>
             <div id="wiki-content">
-                
                 <div class="content-box" id="content-characters">
                     <h3 class="wiki-content-title" id="title-characters">Personagens</h3>
                     <article class="card-character">
@@ -91,7 +90,7 @@
                             <a href=""><img src="/Image/Token Azura.png" alt="Token de personagem - Azura"></a>
                             <h4 class="character-name">Azura</h4>
                         </header>
-                        <div class="wiki-text">
+                        <div class="character-text">
                             <p> delectus excepturi cum eos facilis eligendi ratione, ad accusamus magnam architecto asperiores itaque quos, laboriosam nesciunt ullam a necessitatibus? Eligendi, qui!</p>
                         </div>
                         <footer>
@@ -99,7 +98,6 @@
                         </footer>
                     </article>
                 </div>
-                
                 <div class="content-box" id="content-cities">
                     <h3 class="wiki-content-title" id="title-cities">Cidades</h3>
                     <article class="card-city">
@@ -133,16 +131,20 @@
         </section>
         <section id="contact">
             <h2 id="title-contact">Entre em contato</h2>
-            <p>Envie sua mensagem e assim que possível responderemos!</p>
-            <form>
-                <input type="text" id="name" placeholder="Digite seu nome">
-                <input type="text" id="email" placeholder="Digite seu email">
-                <textarea name="message" id="message" placeholder="Digite a mensagem aqui"></textarea>
-                <button type="submit" id="submit-message">Envia mensagem</button>
-            </form>
+            <div id="contact-content">
+                <p>Envie sua mensagem e assim que possível responderemos!</p>
+                <form>
+                    <div id="form-top">
+                        <input type="text" id="name" placeholder="Digite seu nome">
+                        <input type="text" id="email" placeholder="Digite seu email">
+                    </div>
+                    <textarea name="message" id="message" placeholder="Digite a mensagem aqui"></textarea>
+                    <button type="submit" id="submit-message">Envia mensagem</button>
+                </form>
+            </div>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <h2>RPG - Odisseia</h2>
         <p>Todos os Direitos Reservados &copy; 2024 RPG - Odisseia</p>
     </footer>
