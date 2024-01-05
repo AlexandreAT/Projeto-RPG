@@ -345,8 +345,9 @@ section{
     display: flex;
     justify-content: center;
     gap: 2rem;
+    width: 100%;
     padding-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
     position: relative;
 }
 
@@ -387,7 +388,24 @@ article{
     border-radius: 5px;
 }
 
+#content-navigation{
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    bottom: -40px;
+}
+
 /* card dos personagens */
+
+.content-characters{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.content-characters.content-characters-disable {
+    display: none;
+}
 
 .card-character header{
     display: flex;
@@ -443,6 +461,16 @@ article{
 
 /* card das cidades */
 
+.content-cities{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.content-cities.content-cities-disable {
+    display: none;
+}
+
 .card-city{
     padding: 0;
 }
@@ -472,6 +500,28 @@ article{
 #city-Elysium{
     height: 250px;
     background-image: url(/Image/Cidade\ Elysium.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#city-Loryzon{
+    height: 250px;
+    background-image: url(/Image/Cidade\ Loryzon.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#city-Ravena{
+    height: 250px;
+    background-image: url(/Image/Cidade\ Ravena.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -752,7 +802,10 @@ button:hover{
     #campaing-text p{
         font-size: 16px;
     }
-    .content-box{
+    .content-characters{
+        gap: 0.5rem;
+    }
+    .content-cities{
         gap: 0.5rem;
     }
     .card-character img{
@@ -857,8 +910,12 @@ button:hover{
     #campaing-content img{
         display: none;
     }
-    .content-box{
-        display: flex;
+    .content-characters{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .content-cities{
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
