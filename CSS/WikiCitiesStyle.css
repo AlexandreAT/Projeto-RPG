@@ -2,89 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 @import url('https://fonts.cdnfonts.com/css/do-futuristic');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Comfortaa';
-    /*font-family: 'Cyberpunk Is Not Dead', sans-serif;*/
-}
-
-:root{
-    /*-----------------------------------*/
-    --clearneonBlue: #4deeea;
-    --neonBlue: #00b8ff;
-    --deepneonBlue: #4700ff;
-    --clearneonPurple: #ff00b8;
-    --neonPurple: #c610ae;
-    --deepneonPurple: #B71DDE;
-
-    --clearnedonGreen: #00ff47;
-    --neonGreen: #04e762;
-    --deepneonGreen: #4cb944;
-    --clearneonRed: #ff4700;
-    --neonRed: #D22730;
-    --deepneonRed: #860f0f;
-
-    --clearneonYellow: #e5ec1a;
-    --neonYellow: #FFDE00;
-    --deepneonYellow: #deb00a;
-    --clearneonViolet: #9400d3;
-    --neonViolet: #663399;
-    --deepneonViolet: #4b0082;
-
-    --neonOrange:  #FFAD00;
-    /*-----------------------------------*/
-    --whitesmoke: rgb(229, 229, 229);
-    --grey: rgb(106, 106, 106);
-    --mediumgrey: rgb(80, 80, 80);
-    --deepgrey: rgb(50, 50, 50);
-    --clearblack: rgba(35, 35, 35, 0.5);
-    --mediumblack: rgb(23, 23, 23);
-    /*-----------------------------------*/
-}
-
-body{
-    background-color: var(--mediumblack);
-}
-
-ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    position: relative;
-    transition: all 350ms ease;
-}
-
-a::after{
-    position: absolute;
-    content: " ";
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    border-radius: 10px;
-    transition: all 350ms ease;
-}
-
-a:hover::after{
-    width: 100%;
-    transition: all 350ms ease;
-}
-
-h1, h2{
-    font-family: 'Cyberpunk Is Not Dead', sans-serif;
-    color: var(--clearneonBlue);
-    text-shadow: 1.5px 1.5px 3px var(--clearneonPurple);
-}
-
-p, span{
-    color: var(--whitesmoke);
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -128,6 +45,14 @@ p, span{
     /*-----------------------------------*/
 }
 
+body{
+    background-color: var(--mediumblack);
+}
+
+ul{
+    list-style: none;
+}
+
 h1, h2{
     font-family: 'Cyberpunk Is Not Dead', sans-serif;
     font-size: 2rem;
@@ -141,6 +66,7 @@ p, span{
 a{
     text-decoration: none;
     position: relative;
+    cursor: pointer;
     transition: all 350ms ease;
 }
 
@@ -252,17 +178,20 @@ a:hover::after{
     width: 0%;
 }
 
-/* div container/main */
+/* div container */
 
 .container{
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     padding: 0px 15%;
     margin-top: 10vh;
 }
 
+/* main */
+
 #cities-container{
     flex: 3 1 0;
+    padding-right: 3rem;
 }
 
 .city{
@@ -270,11 +199,21 @@ a:hover::after{
 }
 
 .city img{
+    margin-bottom: -1%;
     width: 100%;
-    margin-bottom: 1rem;
-    padding: 1px;
-    box-shadow: 0px 0px 10px var(--neonRed);
     border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.img-container{
+    box-shadow: 0px 0px 10px var(--neonRed);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.city img:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease;
 }
 
 .title,
@@ -290,6 +229,10 @@ a:hover::after{
     font-weight: 100;
 }
 
+.hidden{
+    display: none;
+}
+
 .read-more{
     color: var(--clearneonRed);
 }
@@ -298,6 +241,8 @@ a:hover::after{
     background-color: var(--clearneonRed);
     box-shadow: 0px 0px 10px var(--clearneonRed);
 }
+
+/* sidebar */
 
 #sidebar{
     flex: 1 1 0;
@@ -360,25 +305,24 @@ a:hover::after{
 
 #search-bar button:hover{
     box-shadow: inset 0px 0px 10px var(--clearneonPurple);
-    font-weight: bold;
     transition: all 350ms ease;
 }
 
 #categories{
     border: 1px solid var(--neonGreen);
-    box-shadow: inset 0px 0px 10px var(--clearnedonGreen);
+    box-shadow: inset 0px 0px 10px var(--clearneonGreen);
     border-radius: 5px;
 }
 
 #categories h4{
-    color: var(--clearnedonGreen);
+    color: var(--clearneonGreen);
     text-shadow: 1.5px 1.5px 3px var(--clearneonRed);
 }
 
 #categories-title{
     font-size: 1.4rem;
     margin-bottom: 5px;
-    color: var(--clearnedonGreen);
+    color: var(--clearneonGreen);
     text-shadow: 0px 0px 10px var(--deepneonGreen);
 }
 
@@ -393,6 +337,21 @@ a:hover::after{
 #categories a::after{
     background-color: var(--clearneonRed);
     box-shadow: 0px 0px 10px var(--clearneonRed);
+}
+
+#remove-filter{
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--neonGreen);
+    background-color: transparent;
+    color: var(--clearneonGreen);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 350ms ease;
+}
+
+#remove-filter:hover{
+    box-shadow: inset 0px 0px 10px var(--clearneonGreen);
+    transition: all 350ms ease;
 }
 
 #tags{
@@ -427,6 +386,13 @@ a:hover::after{
     box-shadow: inset 0px 0px 10px var(--clearneonViolet);
 }
 
+#div-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* footer */
 
 #footer{
@@ -452,42 +418,84 @@ a:hover::after{
     font-size: 18px;
 }
 
-@media (max-width: 950px) {
+/* telas menores */
+
+@media (max-width: 1445px) {
+    .container{
+        padding: 0 10%;
+        transition: all 350ms ease;
+    }
+    #navbar{
+        padding: 4px 10%;
+        transition: all 350ms ease;
+    }
+}
+
+/* telas menores 2 */
+
+@media (max-width: 980px) {
     h1{
         font-size: 20px;
     }
-    .logo{
-        display: none;
+    #navbar{
+        height: 7vh;
+        transition: all 350ms ease;
     }
-    #nav-links{
-        gap: 1rem;
+    #navbar-title img{
+        width: 35px;
+        margin-right: 15px;
+        transition: all 350ms ease;
     }
-    #nav-links li:hover{
-        transform: scale(1.0);
+    #navbar-title h1{
+        font-size: 25px;
+        transition: all 350ms ease;
+    }
+    #navbar-links{
+        gap: 0.6rem;
+        transition: all 350ms ease;
+    }
+    #navbar-links a{
+        font-size: 13px;
+        transition: all 350ms ease;
+    }
+    #navbar-links li:hover{
+        transform: none;
+        transition: all 350ms ease;
+    }
+    #navbar-login{
+        padding: 8px;
+        border: 1px solid var(--neonRed);
+        transition: all 350ms ease;
+    }
+    #navbar-login:hover{
+        border: 1px solid var(--neonBlue);
     }
     .container{
         flex-wrap: wrap;
+        margin-top: 7vh;
+    }
+    #cities-container{
+        padding-right: 0rem;
     }
 }
 
 @media (max-width: 780px) {
     #navbar{
-        padding: 1rem 1rem;
+        padding: 4px 5%;
+        height: 5vh;
+        transition: all 350ms ease;
     }
-    #navbar-inner{
-        flex-direction: column;
+    #navbar-title img{
+        width: 30px;
+        margin-right: 10px;
+        transition: all 350ms ease;
     }
-    #nav-title{
-        margin-bottom: 1rem;
+    #navbar-title h1{
+        display: none;
     }
-    #nav-links{
-        gap: 0.5rem;
-    }
-    #login{
-        padding: 8px 10px;
-    }
-    #nav-links a{
-        font-size: 12px;
+    .container{
+        padding: 0px 5%;
+        margin-top: 5vh;
     }
     #search-bar,
     #categories,
@@ -510,22 +518,85 @@ a:hover::after{
     #search-bar button{
         padding: 0.5rem 0.5rem;
     }
+    #contact-content p{
+        text-align: center;
+        font-size: 18px;
+        border-bottom: 2px solid var(--clearneonViolet);
+    }
+    #contact-content form{
+        width: 80%;
+    }
 }
 
-@media (max-width: 364px) {
-    h1{
-        font-size: 16px;
+@media (max-width: 500px) {
+    h1, h2{
+        font-size: 18px;
     }
     #navbar{
-        padding: 0.5rem 0.5rem;
+        height: 8vh;
     }
-    #nav-links{
-        gap: 0.3rem;
+    #navbar-title img{
+        display: none;
     }
-    #login{
-        padding: 2px 4px;
+    #navbar-content{
+        justify-content: center;
     }
-    #nav-links a{
-        font-size: 10px;
+    #navbar-links{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #navbar-links a{
+        font-size: 14px;
+        transition: all 350ms ease;
+    }
+    #navbar-login{
+        padding: 0;
+        border: none;
+        border-radius: none;
+    }
+    
+    #navbar-login:hover{
+        border: none;
+        box-shadow: none;
+        font-weight: normal;
+    }
+    #navbar-login::after{
+        background-color: var(--neonRed);
+        box-shadow: 0px 0px 10px var(--neonRed);
+    }
+    #navbar-login:hover::after{
+        width: 100%;
+    }
+    .container{
+        margin-top: 8vh;
+        flex-direction: column;
+    }
+    #footer h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    #footer p{
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+/* Celulares menores */
+
+@media (max-width: 410px) {
+    #navbar{
+        height: 10vh;
+    }
+    #navbar-links{
+        display: flex;
+        gap: 0.8rem;
+        list-style: none;
+    }
+    #navbar-links a{
+        font-size: 12px;
+        transition: all 350ms ease;
+    }
+    .container{
+        margin-top: 10vh;
     }
 }

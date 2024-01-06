@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/WikiCitiesStyle.css">
     <link rel="shortcut icon" href="/Image/Logo Dado.png" type="image/x-icon">
-    <title>Projeto 5</title>
+
+    <link rel="stylesheet" href="/CSS/WikiCitiesStyle.css">
+
+    <title>Wiki - Cidades</title>
 </head>
 <body>
     <header>
@@ -28,92 +30,144 @@
     </header>
     <div class="container">
         <main id="cities-container">
-            <article class="city">
-                <img src="/Image/Cidade Elysium.png" alt="Cidade Elysium" id="city-Elysium">
+            <article class="city" data-filter="Planicies Savanas Euroafricana Metropoles CapitaisRegionais GovernoRegional">
+                <div class="img-container">
+                    <img src="/Image/Cidade Elysium.png" alt="Cidade Elysium" id="city-Elysium">
+                </div>
                 <h3 class="title">Elysium</h3>
-                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.</p>
-                <a href="#" class="read-more">Ler mais</a>
+                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat
+                    <span class="ellipsis">...</span>
+                    <span class="moreText hidden">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro veniam itaque sapiente voluptatem incidunt dolores? Tempore quaerat corrupti incidunt nam numquam odio ratione! Sed, distinctio atque totam aut eius porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestiae sint, iusto laboriosam iure reprehenderit delectus minima praesentium nulla cupiditate, nesciunt assumenda, enim neque exercitationem mollitia ullam odit. Deleniti, accusamus.
+                    </span>
+                </p>
+                <a onclick="readMore(this)" class="read-more">Ler mais</a>
             </article>
-            <article class="city">
-                <img src="/Image/Cidade Loryzon.png" alt="Cidade Loryzon" id="city-Loryzon">
+            <article class="city" data-filter="Florestas Planicies Montanhas Asiapacifica CentrosUrbanosLocais FamiliaOuClaLocal">
+                <div class="img-container">
+                    <img src="/Image/Cidade Loryzon.png" alt="Cidade Loryzon" id="city-Loryzon">
+                </div>
                 <h3 class="title">Loryzon</h3>
-                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.</p>
-                <a href="#" class="read-more">Ler mais</a>
+                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.
+                    <span class="ellipsis">...</span>
+                    <span class="moreText hidden">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro veniam itaque sapiente voluptatem incidunt dolores? Tempore quaerat corrupti incidunt nam numquam odio ratione! Sed, distinctio atque totam aut eius porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestiae sint, iusto laboriosam iure reprehenderit delectus minima praesentium nulla cupiditate, nesciunt assumenda, enim neque exercitationem mollitia ullam odit. Deleniti, accusamus.
+                    </span>
+                </p>
+                <a onclick="readMore(this)" class="read-more">Ler mais</a>
             </article>
-            <article class="city">
-                <img src="/Image/Cidade Alurën.png" alt="Cidade Alurën" id="city-Alurën">
+            <article class="city" data-filter="Florestas Montanhas Americontinental CapitaisRegionais FamiliaOuClaLocal">
+                <div class="img-container">
+                    <img src="/Image/Cidade Alurën.png" alt="Cidade Alurën" id="city-Alurën">
+                </div>
                 <h3 class="title">Alurën</h3>
-                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.</p>
-                <a href="#" class="read-more">Ler mais</a>
+                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.
+                    <span class="ellipsis">...</span>
+                    <span class="moreText hidden">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro veniam itaque sapiente voluptatem incidunt dolores? Tempore quaerat corrupti incidunt nam numquam odio ratione! Sed, distinctio atque totam aut eius porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestiae sint, iusto laboriosam iure reprehenderit delectus minima praesentium nulla cupiditate, nesciunt assumenda, enim neque exercitationem mollitia ullam odit. Deleniti, accusamus.
+                    </span>
+                </p>
+                <a onclick="readMore(this)" class="read-more">Ler mais</a>
             </article>
-            <article class="city">
-                <img src="/Image/Cidade Ravena.png" alt="Cidade Ravena" id="city-Ravena">
+            <article class="city" data-filter="Desertos Savanas Euroafricana Metropoles GestaoLocal">
+                <div class="img-container">
+                    <img src="/Image/Cidade Ravena.png" alt="Cidade Ravena" id="city-Ravena">
+                </div>
                 <h3 class="title">Ravena</h3>
-                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.</p>
-                <a href="#" class="read-more">Ler mais</a>
+                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.
+                    <span class="ellipsis">...</span>
+                    <span class="moreText hidden">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro veniam itaque sapiente voluptatem incidunt dolores? Tempore quaerat corrupti incidunt nam numquam odio ratione! Sed, distinctio atque totam aut eius porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestiae sint, iusto laboriosam iure reprehenderit delectus minima praesentium nulla cupiditate, nesciunt assumenda, enim neque exercitationem mollitia ullam odit. Deleniti, accusamus.
+                    </span>
+                </p>
+                <a onclick="readMore(this)" class="read-more">Ler mais</a>
             </article>
-            <article class="city">
-                <img src="/Image/Cidade Grimdal.png" alt="Cidade Grimdal" id="city-Grimdal">
+            <article class="city" data-filter="Planicies Cerrado Litoral Americontinental CapitaisRegionais GestaoLocal">
+                <div class="img-container">
+                    <img src="/Image/Cidade Grimdal.png" alt="Cidade Grimdal" id="city-Grimdal">
+                </div>
                 <h3 class="title">Grimdal</h3>
-                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.</p>
-                <a href="#" class="read-more">Ler mais</a>
+                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.
+                    <span class="ellipsis">...</span>
+                    <span class="moreText hidden">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro veniam itaque sapiente voluptatem incidunt dolores? Tempore quaerat corrupti incidunt nam numquam odio ratione! Sed, distinctio atque totam aut eius porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestiae sint, iusto laboriosam iure reprehenderit delectus minima praesentium nulla cupiditate, nesciunt assumenda, enim neque exercitationem mollitia ullam odit. Deleniti, accusamus.
+                    </span>
+                </p>
+                <a onclick="readMore(this)" class="read-more">Ler mais</a>
             </article>
-            <article class="city">
-                <img src="/Image/Cidade Ironhold Keep.png" alt="Cidade Ironhold Keep" id="city-IronholdKeep">
+            <article class="city" data-filter="Planicies Pradarias Savanas Americontinental CapitaisRegionais FamiliaOuClaLocal">
+                <div class="img-container">
+                    <img src="/Image/Cidade Ironhold Keep.png" alt="Cidade Ironhold Keep" id="city-IronholdKeep">
+                </div>
                 <h3 class="title">Ironhold Keep</h3>
-                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.</p>
-                <a href="#" class="read-more">Ler mais</a>
+                <p class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, animi neque voluptates, harum ducimus corrupti provident illum numquam repudiandae quam iste ea modi cum voluptate amet sunt eveniet. Blanditiis, fugiat.
+                    <span class="ellipsis">...</span>
+                    <span class="moreText hidden">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro veniam itaque sapiente voluptatem incidunt dolores? Tempore quaerat corrupti incidunt nam numquam odio ratione! Sed, distinctio atque totam aut eius porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil molestiae sint, iusto laboriosam iure reprehenderit delectus minima praesentium nulla cupiditate, nesciunt assumenda, enim neque exercitationem mollitia ullam odit. Deleniti, accusamus.
+                    </span>
+                </p>
+                <a onclick="readMore(this)" class="read-more">Ler mais</a>
             </article>
         </main>
         <aside id="sidebar">
             <section id="search-bar">
                 <h4>Busca</h4>
                 <form>
-                    <input type="text" placeholder="Pesquise no blog">
-                    <button type="submit">Buscar</button>
+                    <input type="text" id="search-content" placeholder="Pesquise na wiki" onkeyup="search()" required>
+                    <button onclick="search()">Buscar</button>
                 </form>
             </section>
             <section id="categories">
-                <h4>Categorias</h4>
+                <h4>Filtro por Categorias</h4>
                 <nav>
-                    <p id="categories-title">Biomas:</p>
+                    <p id="categories-title">Biomas Locais:</p>
                     <ul>
-                        <li><a href="#">Florestas</a></li>
-                        <li><a href="#">Desertos</a></li>
-                        <li><a href="#">Planícies</a></li>
-                        <li><a href="#">Pradarias</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Florestas">Florestas</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Desertos">Desertos</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Planicies">Planícies</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Pradarias">Pradarias</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Savanas">Savanas</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Cerrado">Cerrado</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Montanhas">Montanhas</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Litoral">Litoral</a></li>
                     </ul>
-                    <p id="categories-title">Regiões:</p>
+                    <p id="categories-title">Região do Planeta:</p>
                     <ul>
-                        <li><a href="#">Americontinental</a></li>
-                        <li><a href="#">Euroafricana</a></li>
-                        <li><a href="#">Asiapacifica</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Americontinental">Americontinental</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Euroafricana">Euroafricana</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Asiapacifica">Asiapacifica</a></li>
                     </ul>
-                    <p id="categories-title">Tipo:</p>
+                    <p id="categories-title">Tipo de Cidade:</p>
                     <ul>
-                        <li><a href="#">Metrópoles</a></li>
-                        <li><a href="#">Capitais regionais</a></li>
-                        <li><a href="#">Centros urbanos locais</a></li>
-                        <!-- <li><a href="#">Vilas</a></li>
-                        <li><a href="#">Aldeias</a></li>
-                        <li><a href="#">Aglomerado subnormal</a></li>  -->
+                        <li><a href="#" class="filter-link" data-filter="Metropoles">Metrópoles</a></li>
+                        <li><a href="#" class="filter-link" data-filter="CapitaisRegionais">Capitais regionais</a></li>
+                        <li><a href="#" class="filter-link" data-filter="CentrosUrbanosLocais">Centros urbanos locais</a></li>
+                        <!-- <li><a href="#" class="filter-link" data-filter="Vilas">Vilas</a></li>
+                        <li><a href="#" class="filter-link" data-filter="Aldeias">Aldeias</a></li>
+                        <li><a href="#" class="filter-link" data-filter="AglomeradoSubnormal">Aglomerado subnormal</a></li>  -->
                     </ul>
-                    <p id="categories-title">Gestão:</p>
+                    <p id="categories-title">Tipo de Gestão:</p>
                     <ul>
-                        <li><a href="#">Governo regional</a></li>
-                        <li><a href="#">Gestão local</a></li>
-                        <li><a href="#">Família/Clã local</a></li>
-                        <li><a href="#">Gestão local</a></li>
+                        <li><a href="#" class="filter-link" data-filter="GovernoRegional">Governo regional</a></li>
+                        <li><a href="#" class="filter-link" data-filter="GestaoLocal">Gestão local</a></li>
+                        <!-- <li><a href="#" class="filter-link" data-filter="Confederação">Confederação</a></li> -->
+                        <li><a href="#" class="filter-link" data-filter="FamiliaOuClaLocal">Família/Clã local</a></li>
+                        <!-- <li><a href="#" class="filter-link" data-filter="SociedadeAutonoma">Sociedade Autônoma</a></li> -->
                     </ul>
                 </nav>
+                <div id="div-btn">
+                    <button id="remove-filter">Retirar Filtro</button>
+                </div>
             </section>
             <section id="tags">
                 <h4>Tags</h4>
                 <div id="tags-container">
-                    <a href="#">Elysium</a>
-                    <a href="#">Loryzon</a>
-                    <a href="#">Alurën</a>
-                    <a href="#">Ravena</a>
+                    <a href="#city-Elysium">Elysium</a>
+                    <a href="#city-Loryzon">Loryzon</a>
+                    <a href="#city-Alurën">Alurën</a>
+                    <a href="#city-Ravena">Ravena</a>
+                    <a href="#city-Grimdal">Grimdal</a>
+                    <a href="#city-IronholdKeep">Ironhold Keep</a>
                 </div>
             </section>
         </aside>
@@ -122,5 +176,6 @@
         <h2>RPG - Odisseia</h2>
         <p>Todos os Direitos Reservados &copy; 2024 RPG - Odisseia</p>
     </footer>
+    <script type="text/javascript" src="/JS/WikiScript.js"></script>
 </body>
 </html>
