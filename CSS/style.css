@@ -347,7 +347,7 @@ section{
     gap: 2rem;
     width: 100%;
     padding-top: 2rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.5rem;
     position: relative;
 }
 
@@ -391,8 +391,54 @@ article{
 #content-navigation{
     position: absolute;
     display: flex;
+    align-items: center;
     gap: 1rem;
-    bottom: -40px;
+    bottom: -55px;
+}
+
+#content-navigation input{
+    appearance: none;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#content-navigation input:hover{
+    border-color: var(--neonYellow);
+}
+
+#content-navigation input:checked{
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
+}
+
+#content-navigation input[name="radio-btn"]:checked{
+    border-color: var(--neonBlue);
+    box-shadow: inset 0px 0px 5px var(--clearneonBlue);
+    transition: all 0.5s ease-in-out;
+}
+
+#content-navigation input[name="radio-btn"]:checked::after{
+    content: "";
+    display: block;
+    border: 3px solid var(--neonBlue);
+    border-radius: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+#content-navigation input[name="radio-btn-city"]:checked{
+    border-color: var(--neonRed);
+    box-shadow: inset 0px 0px 5px var(--clearneonRed);
+    transition: all 0.5s ease-in-out;
+}
+
+#content-navigation input[name="radio-btn-city"]:checked::after{
+    content: "";
+    display: block;
+    border: 3px solid var(--neonRed);
+    border-radius: 100%;
+    transition: all 0.5s ease-in-out;
 }
 
 /* card dos personagens */
@@ -473,6 +519,7 @@ article{
 
 .card-city{
     padding: 0;
+    overflow: hidden;
 }
 
 .card-city header:hover{
@@ -522,6 +569,28 @@ article{
 #city-Ravena{
     height: 250px;
     background-image: url(/Image/Cidade\ Ravena.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#city-Grimdal{
+    height: 250px;
+    background-image: url(/Image/Cidade\ Grimdal.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#city-IronholdKeep{
+    height: 250px;
+    background-image: url(/Image/Cidade\ Ironhold\ Keep.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -611,6 +680,7 @@ article{
     width: 50%;
     max-width: 700px;
     height: 20%;
+    position: relative;
 }
 
 #form-top{
@@ -618,6 +688,33 @@ article{
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    position: relative;
+}
+
+#name-required,
+#email-required,
+#textarea-required{
+    position: absolute;
+}
+
+#name-required{
+    left: -10px;
+    top: -10px;
+    font-size: 18px;
+    color: var(--neonRed);
+}
+
+#email-required{
+    top: -10px;
+    font-size: 18px;
+    color: var(--neonRed);
+}
+
+#textarea-required{
+    top: 65px;
+    left: +7px;
+    font-size: 18px;
+    color: var(--neonRed);
 }
 
 input,
@@ -632,6 +729,7 @@ textarea{
     font-size: 16px;
     color: var(--clearneonViolet);
     transition: all 350ms ease;
+    position: relative;
 }
 
 input:focus,
@@ -853,6 +951,14 @@ button:hover{
     #campaing-text p{
         font-size: 14px;
     }
+    #contact-content p{
+        text-align: center;
+        font-size: 18px;
+        border-bottom: 2px solid var(--clearneonViolet);
+    }
+    #contact-content form{
+        width: 80%;
+    }
 }
 
 /* celulares */
@@ -931,11 +1037,6 @@ button:hover{
     }
     .city-name{
         font-size: 25px;
-    }
-    #contact-content p{
-        text-align: center;
-        font-size: 18px;
-        border-bottom: 2px solid var(--clearneonViolet);
     }
     #contact-content form{
         width: 100%;

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    color: mediumgrey;
+}
+
+:root{
+    /*-----------------------------------*/
+    --clearneonBlue: #4deeea;
+    --neonBlue: #00b8ff;
+    --deepneonBlue: #4700ff;
+    --clearneonPurple: #ff00b8;
+    --neonPurple: #C724B1;
+    --clearnedonGreen: #00ff47;
+    --neonYellow: #E0E722;
+    --neonOrange:  #FFAD00;
+    --clearneonRed: #ff4700;
+    --neonRed: #D22730;
+    --deepneonRed: #860f0f;
+    /*-----------------------------------*/
+    --white: white;
+    --whitesmoke: rgb(229, 229, 229);
+    --lightgrey: rgb(200, 200, 200);
+    --grey: rgb(106, 106, 106);
+    --mediumgrey: rgb(80, 80, 80);
+    --deepgrey: rgb(50, 50, 50);
+    --mediumblack: rgb(23, 23, 23);
+    --black: black;
+    --blue: rgb(53, 53, 255);
+    --red: red;
+    /*-----------------------------------*/
+}
+
+main{
+    display: flex;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    padding: clamp(25px, 8%, 70px);
+    background-color: var(--mediumblack);
+    box-shadow: inset 0px 0px 10px var(--neonPurple);
+}
+
+.cima{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_logo{
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.login_title{
+    color: var(--mediumblack);
+    /* -webkit-text-stroke: 0.01px var(--neonPurple); */
+    text-shadow: 
+               -1px -1px 0px var(--neonPurple), 
+               -1px 1px 0px var(--neonPurple),                    
+                1px -1px 0px var(--neonPurple),
+                1px 1px 0px var(--neonPurple);
+    letter-spacing: 1px;
+    /* text-shadow: 0px 0px 0px var(--whitesmoke); */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.login_label{
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input{
+    width: 100%;
+    background-color: var(--mediumgrey);
+    border: 2px solid rgba(1, 1, 1, 0);
+    border-radius: 7px;
+    outline: none;
+    font-size: 0.9em;
+    padding: 25px 10px 10px;
+    font-weight: 600;
+    color: var(--whitesmoke);
+}
+
+.login_label span {
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--neonBlue);
+    text-shadow: 0px 0px 15px var(--neonBlue);
+    margin: 20px;
+    cursor: text;
+    transition: all 250ms ease;
+}
+
+.input:focus{
+    transition: all 300ms ease;
+    background-color: var(--deepgrey);
+    border: 2px solid var(--neonBlue); 
+    box-shadow: inset 0 0 10px var(--neonBlue); 
+    color: var(--lightgrey);
+}
+
+.login_label .span_active{
+    font-size: 0.7em;
+    margin: 8px 10px;
+    text-shadow: none;
+}
+
+.login_icons{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.login_icons img{
+    width: 20px;
+}
+
+.icon_button {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+}
+
+.login_icons .icon_button:nth-child(1){
+    background-color: var(--blue);
+}
+
+.login_icons .icon_button:nth-child(2){
+    background-color: var(--lightgrey);
+}
+
+.login_icons .icon_button:nth-child(3){
+    background-color: var(--black);
+}
+
+.login_label_checkbox{
+    width: 100%;
+    margin: 15px 0 50px;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    color: var(--neonBlue);
+    text-shadow: 0px 0px 10px var(--clearneonBlue);
+}
+
+.input_checkbox{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--mediumgrey);
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+.input_checkbox:checked{
+    transition: all 250ms ease;
+    background-color: var(--deepgrey);
+    box-shadow: inset 0px 0px 5px var(--neonBlue);
+}
+
+.input_checkbox:checked::after{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: 3px solid var(--neonBlue);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 2px 6px;
+}
+
+.login_button{
+    transition: all 350ms ease;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mediumblack);
+    box-shadow: inset 0px 0px 10px var(--neonPurple);
+    border-radius: 20px;
+    border: 1px solid var(--neonPurple);
+    cursor: pointer;
+    margin-bottom: 55px;
+}
+
+.login_button:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+.login_button svg {
+    transition: all 350ms ease;
+    fill: var(--neonPurple);
+}
+
+.login_button svg{
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+.login_button:disabled{
+    transition: all 350ms ease;
+    cursor: auto;
+    background-color: var(--mediumblack);
+    border: 2px solid var(--deepgrey);
+    box-shadow: none;
+    transform: none;
+}
+
+.login_button:disabled svg{
+    transition: all 350ms ease;
+    fill: var(--deepgrey);
+    transform: none;
+}
+
+.login_link {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: var(--mediumgrey);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: 700;
+    position: relative;
+}
+
+.login_link::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: var(--neonBlue);
+    box-shadow: 0px 0px 10px var(--neonBlue);
+    bottom: 0;
+    left: 0;
+}
+
+.login_link:hover::after{
+    width: 100%;
+    transition: all 250ms ease;
+}
+
+.wallpaper{
+    width: 100%;
+    background-image: url('/Image/Banner\ Login.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}

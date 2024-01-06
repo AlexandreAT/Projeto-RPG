@@ -1,0 +1,531 @@
+@import url('https://fonts.cdnfonts.com/css/cyberpunk-is-not-dead');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.cdnfonts.com/css/do-futuristic');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa';
+    /*font-family: 'Cyberpunk Is Not Dead', sans-serif;*/
+}
+
+:root{
+    /*-----------------------------------*/
+    --clearneonBlue: #4deeea;
+    --neonBlue: #00b8ff;
+    --deepneonBlue: #4700ff;
+    --clearneonPurple: #ff00b8;
+    --neonPurple: #c610ae;
+    --deepneonPurple: #B71DDE;
+
+    --clearnedonGreen: #00ff47;
+    --neonGreen: #04e762;
+    --deepneonGreen: #4cb944;
+    --clearneonRed: #ff4700;
+    --neonRed: #D22730;
+    --deepneonRed: #860f0f;
+
+    --clearneonYellow: #e5ec1a;
+    --neonYellow: #FFDE00;
+    --deepneonYellow: #deb00a;
+    --clearneonViolet: #9400d3;
+    --neonViolet: #663399;
+    --deepneonViolet: #4b0082;
+
+    --neonOrange:  #FFAD00;
+    /*-----------------------------------*/
+    --whitesmoke: rgb(229, 229, 229);
+    --grey: rgb(106, 106, 106);
+    --mediumgrey: rgb(80, 80, 80);
+    --deepgrey: rgb(50, 50, 50);
+    --clearblack: rgba(35, 35, 35, 0.5);
+    --mediumblack: rgb(23, 23, 23);
+    /*-----------------------------------*/
+}
+
+body{
+    background-color: var(--mediumblack);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+    transition: all 350ms ease;
+}
+
+a::after{
+    position: absolute;
+    content: " ";
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: all 350ms ease;
+}
+
+a:hover::after{
+    width: 100%;
+    transition: all 350ms ease;
+}
+
+h1, h2{
+    font-family: 'Cyberpunk Is Not Dead', sans-serif;
+    color: var(--clearneonBlue);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonPurple);
+}
+
+p, span{
+    color: var(--whitesmoke);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    /*font-family: 'Comfortaa';*/
+    /*font-family: 'Cyberpunk Is Not Dead', sans-serif;*/
+}
+
+:root{
+    /*-----------------------------------*/
+    --clearneonBlue: #4deeea;
+    --neonBlue: #00b8ff;
+    --deepneonBlue: #4700ff;
+    --clearneonPurple: #ff00b8;
+    --neonPurple: #c610ae;
+    --deepneonPurple: #B71DDE;
+
+    --clearneonGreen: #00ff47;
+    --neonGreen: #04e762;
+    --deepneonGreen: #4cb944;
+    --clearneonRed: #ff4700;
+    --neonRed: #D22730;
+    --deepneonRed: #860f0f;
+
+    --clearneonYellow: #e5ec1a;
+    --neonYellow: #FFDE00;
+    --deepneonYellow: #deb00a;
+    --clearneonViolet: #9400d3;
+    --neonViolet: #663399;
+    --deepneonViolet: #4b0082;
+    
+    --neonOrange:  #FFAD00;
+    /*-----------------------------------*/
+    --whitesmoke: rgb(229, 229, 229);
+    --grey: rgb(106, 106, 106);
+    --mediumgrey: rgb(80, 80, 80);
+    --deepgrey: rgb(50, 50, 50);
+    --clearblack: rgba(35, 35, 35, 0.5);
+    --mediumblack: rgb(23, 23, 23);
+    /*-----------------------------------*/
+}
+
+h1, h2{
+    font-family: 'Cyberpunk Is Not Dead', sans-serif;
+    font-size: 2rem;
+}
+
+p, span{
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+    transition: all 350ms ease;
+}
+
+a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    position: absolute;
+    transition: all 350ms ease;
+}
+
+a:hover::after{
+    width: 100%;
+    transition: all 350ms ease;
+}
+
+/* section navbar */
+
+#navbar{
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: fixed;
+    padding: 4px 15%;
+    background-color: var(--deepgrey);
+    border-bottom: 2px solid var(--neonRed);
+    box-shadow: inset 0px 0px 10px var(--neonRed);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all 350ms ease;
+}
+
+#navbar-content{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#navbar-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar-title img{
+    height: 100%;
+    width: 45px;
+    margin-right: 25px;
+    margin-top: 6px;
+}
+
+#navbar-title h1{
+    color: var(--clearneonBlue);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonPurple);
+}
+
+#navbar-links{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+#navbar-links a{
+    font-family: 'Cyberpunk Is Not Dead', sans-serif;
+    font-size: 15px;
+    color: var(--neonRed);
+    
+}
+
+#navbar-links a::after{
+    background-color: var(--neonRed);
+    box-shadow: 0px 0px 10px var(--neonRed);
+}
+
+#navbar-links a:hover{
+    text-shadow: 1.5px 1.5px 3px var(--clearneonBlue);
+}
+
+#navbar-links li:hover{
+    transform: scale(1.1);
+    transition: all 350ms ease;
+}
+
+#navbar-links li{
+    transition: all 350ms ease;
+}
+
+#navbar-login{
+    padding: 10px;
+    border: 2px solid var(--neonRed);
+    border-radius: 5px;
+}
+
+#navbar-login:hover{
+    border: 2px solid var(--neonBlue);
+    box-shadow: inset 0px 0px 10px var(--clearneonBlue);
+    transition: all 350ms ease;
+    font-weight: bold;
+}
+
+#navbar-login:hover::after{
+    width: 0%;
+}
+
+/* div container/main */
+
+.container{
+    display: flex;
+    gap: 3rem;
+    padding: 0px 15%;
+    margin-top: 10vh;
+}
+
+#cities-container{
+    flex: 3 1 0;
+}
+
+.city{
+    margin-bottom: 2.5rem;
+}
+
+.city img{
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1px;
+    box-shadow: 0px 0px 10px var(--neonRed);
+    border-radius: 5px;
+}
+
+.title,
+.discription{
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-size: 2rem;
+    color: var(--neonRed);
+    text-shadow: 1.5px 1.5px 5px var(--deepneonRed);
+    font-family: 'DO Futuristic', sans-serif;
+    font-weight: 100;
+}
+
+.read-more{
+    color: var(--clearneonRed);
+}
+
+.read-more::after{
+    background-color: var(--clearneonRed);
+    box-shadow: 0px 0px 10px var(--clearneonRed);
+}
+
+#sidebar{
+    flex: 1 1 0;
+}
+
+#search-bar,
+#categories,
+#tags{
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--clearblack);
+}
+
+#search-bar h4,
+#categories h4,
+#tags h4{
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+#search-bar{
+    border: 1px solid var(--neonBlue);
+    box-shadow: inset 0px 0px 10px var(--clearneonBlue);
+    border-radius: 5px;
+}
+
+#search-bar h4{
+    color: var(--clearneonBlue);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonPurple);
+}
+
+#search-bar form{
+    display: flex;
+    justify-content: space-between;
+}
+
+#search-bar input{
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--deepgrey);
+    background-color: transparent;
+    color: var(--clearneonPurple);
+    outline: none;
+    transition: all 350ms ease;
+}
+
+#search-bar input:focus{
+    border-color: var(--neonPurple);
+    box-shadow: inset 0px 0px 10px var(--clearneonPurple);
+    transition: all 350ms ease;
+}
+
+#search-bar button{
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--neonPurple);
+    background-color: transparent;
+    color: var(--clearneonPurple);
+    cursor: pointer;
+    transition: all 350ms ease;
+}
+
+#search-bar button:hover{
+    box-shadow: inset 0px 0px 10px var(--clearneonPurple);
+    font-weight: bold;
+    transition: all 350ms ease;
+}
+
+#categories{
+    border: 1px solid var(--neonGreen);
+    box-shadow: inset 0px 0px 10px var(--clearnedonGreen);
+    border-radius: 5px;
+}
+
+#categories h4{
+    color: var(--clearnedonGreen);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonRed);
+}
+
+#categories-title{
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: var(--clearnedonGreen);
+    text-shadow: 0px 0px 10px var(--deepneonGreen);
+}
+
+#categories li{
+    margin-bottom: 1rem;
+}
+
+#categories a{
+    color: var(--clearneonRed);
+}
+
+#categories a::after{
+    background-color: var(--clearneonRed);
+    box-shadow: 0px 0px 10px var(--clearneonRed);
+}
+
+#tags{
+    border: 1px solid var(--neonYellow);
+    box-shadow: inset 0px 0px 10px var(--clearneonYellow);
+    border-radius: 5px;
+}
+
+#tags h4{
+    color: var(--clearneonYellow);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonViolet);
+}
+
+#tags-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#tags a{
+    background-color: var(--deepgrey);
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+    color: var(--clearneonViolet);
+    border: 1px solid transparent;
+}
+
+#tags a:hover{
+    font-size: 17px;
+    font-weight: bold;
+    border: 1px solid var(--neonViolet);
+    box-shadow: inset 0px 0px 10px var(--clearneonViolet);
+}
+
+/* footer */
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    padding: 3rem;
+    background-color: var(--mediumblack);
+    border-top: 2px solid var(--neonRed);
+    box-shadow: inset 0px 0px 20px var(--neonRed);
+}
+
+#footer h2{
+    color: var(--clearneonBlue);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonPurple);
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+
+#footer p{
+    font-size: 18px;
+}
+
+@media (max-width: 950px) {
+    h1{
+        font-size: 20px;
+    }
+    .logo{
+        display: none;
+    }
+    #nav-links{
+        gap: 1rem;
+    }
+    #nav-links li:hover{
+        transform: scale(1.0);
+    }
+    .container{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 780px) {
+    #navbar{
+        padding: 1rem 1rem;
+    }
+    #navbar-inner{
+        flex-direction: column;
+    }
+    #nav-title{
+        margin-bottom: 1rem;
+    }
+    #nav-links{
+        gap: 0.5rem;
+    }
+    #login{
+        padding: 8px 10px;
+    }
+    #nav-links a{
+        font-size: 12px;
+    }
+    #search-bar,
+    #categories,
+    #tags{
+        padding: 1rem;
+    }
+    #search-bar h4,
+    #categories h4,
+    #tags h4{
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+    #search-bar form{
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+    #search-bar input{
+        padding: 0.5rem 0.5rem;
+    }
+    #search-bar button{
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+@media (max-width: 364px) {
+    h1{
+        font-size: 16px;
+    }
+    #navbar{
+        padding: 0.5rem 0.5rem;
+    }
+    #nav-links{
+        gap: 0.3rem;
+    }
+    #login{
+        padding: 2px 4px;
+    }
+    #nav-links a{
+        font-size: 10px;
+    }
+}
